@@ -1,11 +1,6 @@
-import re
-import subprocess
-import time
-import torch
-import whisperx
+import re, json, subprocess, time, torch, whisperx, librosa, queue, os, secrets, gc, random
 from langchain_groq import ChatGroq
 from pyannote.audio import Pipeline
-import librosa
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from Transcribe.config import OUTPUT_FOLDER, text_fail, SPEAKER_FOLDER, NEON_RED, NEON_GREEN, RESET_COLOR, NEON_CYAN
@@ -13,18 +8,9 @@ from threading import Thread
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from PySide6.QtCore import *
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
-import queue
-from huggingface_hub import hf_hub_download
-import os
-import secrets
-import gc
 from dotenv import load_dotenv
-import json
 from pyvi import ViTokenizer, ViPosTagger
 from pydub import AudioSegment
-import random
 
 load_dotenv()
 

@@ -1,0 +1,8 @@
+langchain_groq
+pyannote.audio
+PySide6
+langchain
+langchain_core
+python-dotenv
+pyvi
+pydub
