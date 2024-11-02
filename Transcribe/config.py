@@ -36,10 +36,10 @@ if not os.path.exists(f"{MODELS_FOLDER}/text_fail.pkl"):
 with open(f"{MODELS_FOLDER}/text_fail.pkl", "rb") as file:
     text_fail = pickle.load(file)
 
-file_path = f"{MODELS_FOLDER}/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf"
-if not os.path.isfile(file_path):
-    hf_hub_download(repo_id="bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
-                    filename="Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf", local_dir=MODELS_FOLDER,)
+# file_path = f"{MODELS_FOLDER}/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf"
+# if not os.path.isfile(file_path):
+#     hf_hub_download(repo_id="bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+#                     filename="Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf", local_dir=MODELS_FOLDER,)
 
 
 languages = {
